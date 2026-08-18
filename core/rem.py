@@ -74,12 +74,12 @@ class Rem(commands.AutoShardedBot):
             )
         elif reason == "guild_blacklisted":
             view = error_panel(
-                "This server is restricted from using REM.",
+                "This server is restricted from using Rumi.",
                 title="Access Denied",
             )
         elif reason == "user_blacklisted":
             view = error_panel(
-                "You are restricted from using REM.",
+                "You are restricted from using Rumi.",
                 title="Access Denied",
             )
         elif reason == "channel_ignored":
@@ -134,9 +134,9 @@ class Rem(commands.AutoShardedBot):
             retry = reason.split(":", 1)[1]
             message = f"Slow down — try again in **{retry}s**."
         elif reason == "user_blacklisted":
-            message = "You are restricted from using REM."
+            message = "You are restricted from using Rumi."
         elif reason == "guild_blacklisted":
-            message = "This server is restricted from using REM."
+            message = "This server is restricted from using Rumi."
         else:
             message = "You cannot use this command."
 
