@@ -23,7 +23,7 @@ from utils import console
 from utils.startup import StartupError, validate_startup_config
 
 console.setup_console_logging(LOG_LEVEL)
-log = logging.getLogger("rem")
+log = logging.getLogger("rumi")
 
 client = Rem()
 app = Flask(__name__)
@@ -111,7 +111,7 @@ async def on_command_completion(context: commands.Context) -> None:
 
 @app.route("/")
 def home():
-    return "REM ALL IN ONE BOT is online"
+    return "Rumi is online"
 
 
 @app.route("/health")
@@ -212,7 +212,7 @@ def _register_signal_handlers(loop: asyncio.AbstractEventLoop) -> None:
         _interrupt_count += 1
 
         if _interrupt_count >= 2:
-            console.warn("Force stopping REM...")
+            console.warn("Force stopping Rumi...")
             os._exit(0)
 
         console.warn("Interrupted — shutting down... (Ctrl+C again to force)")
@@ -268,5 +268,5 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         pass
     finally:
-        console.info("REM stopped cleanly.")
+        console.info("Rumi stopped cleanly.")
         sys.exit(0)
