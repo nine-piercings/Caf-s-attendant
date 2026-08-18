@@ -10,7 +10,7 @@ class Mention(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.color = 0x0095ff
-        self.bot_name = "REM ALL IN ONE BOT"
+        self.bot_name = "Rumi"
 
     async def is_blacklisted(self, message):
         async with connect('block.db') as db:
@@ -54,7 +54,7 @@ class Mention(commands.Cog):
                 )
                 bot_avatar = self.bot.user.display_avatar.url
                 embed.set_thumbnail(url=bot_avatar)
-                embed.set_footer(text="Powered by REM ALL IN ONE BOT", icon_url=bot_avatar)
+                embed.set_footer(text="Powered by Rumi", icon_url=bot_avatar)
 
                 buttons = [
                     discord.ui.Button(label="Invite", style=discord.ButtonStyle.link, url="https://discord.com/oauth2/authorize?client_id=1327994903048884288&permissions=8&integration_type=0&scope=bot+applications.commands"),
