@@ -84,7 +84,7 @@ class Guild(Cog):
                 color=0xFF0000,
             )
             embed.set_author(name="Thanks for adding me!", icon_url=guild.me.display_avatar.url)
-            embed.set_footer(text="Powered by REM ALL IN ONE BOT")
+            embed.set_footer(text="Powered by Rumi")
             if guild.icon:
                 embed.set_thumbnail(url=guild.icon.url)
 
